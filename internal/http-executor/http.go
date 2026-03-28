@@ -144,7 +144,7 @@ func addQueryParameters(s string, params any) (string, error) {
 	if err != nil {
 		return s, err
 	}
-
+	fmt.Println(qs.Encode())
 	for k, v := range qs {
 		if isScientificNotation(v[0]) {
 			expanded, err := expandScientificNotation(v[0])
