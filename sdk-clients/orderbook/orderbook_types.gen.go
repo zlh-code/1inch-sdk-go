@@ -96,7 +96,7 @@ type LimitOrderV3SubscribedApiControllerGetAllLimitOrdersParams struct {
 	Limit float32 `url:"limit,omitempty" json:"limit,omitempty"`
 
 	// Statuses JSON an array of statuses by which limit orders will be filtered: 1 - valid limit orders, 2 - temporary invalid limit orders, 3 - invalid limit orders
-	Statuses string                                                `url:"statuses,omitempty" json:"statuses,omitempty"`
+	Statuses string                                                           `url:"statuses,omitempty" json:"statuses,omitempty"`
 	SortBy   LimitOrderV3SubscribedApiControllerGetAllLimitOrdersParamsSortBy `url:"sortBy,omitempty" json:"sortBy,omitempty"`
 
 	// TakerAsset Address of the maker asset
@@ -104,6 +104,7 @@ type LimitOrderV3SubscribedApiControllerGetAllLimitOrdersParams struct {
 
 	// MakerAsset Address of the maker asset
 	MakerAsset string `url:"makerAsset,omitempty" json:"makerAsset,omitempty"`
+	Cursor     string `url:"cursor,omitempty" json:"cursor,omitempty"`
 }
 
 // LimitOrderV3SubscribedApiControllerGetAllLimitOrdersParamsSortBy defines parameters for LimitOrderV3SubscribedApiControllerGetAllLimitOrders.
