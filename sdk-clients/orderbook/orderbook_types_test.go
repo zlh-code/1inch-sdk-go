@@ -104,7 +104,6 @@ func TestGetOrdersByCreatorAddressParams_Validate(t *testing.T) {
 				LimitOrderV3SubscribedApiControllerGetAllLimitOrdersParams: LimitOrderV3SubscribedApiControllerGetAllLimitOrdersParams{
 					Page:       1,
 					Limit:      1,
-					Statuses:   []float32{1},
 					SortBy:     LimitOrderV3SubscribedApiControllerGetAllLimitOrdersParamsSortByCreateDateTime,
 					TakerAsset: "0x1234567890abcdef1234567890abcdef12345678",
 					MakerAsset: "0x1234567890abcdef1234567890abcdef12345678",
@@ -151,7 +150,6 @@ func TestGetAllOrdersParams_Validate(t *testing.T) {
 				LimitOrderV3SubscribedApiControllerGetAllLimitOrdersParams: LimitOrderV3SubscribedApiControllerGetAllLimitOrdersParams{
 					Page:       1,
 					Limit:      1,
-					Statuses:   []float32{1},
 					SortBy:     LimitOrderV3SubscribedApiControllerGetAllLimitOrdersParamsSortByCreateDateTime,
 					TakerAsset: "0x1234567890abcdef1234567890abcdef12345678",
 					MakerAsset: "0x1234567890abcdef1234567890abcdef12345678",

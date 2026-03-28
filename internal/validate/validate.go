@@ -191,21 +191,6 @@ func CheckLimit(value float32, variableName string) error {
 	return nil
 }
 
-func CheckStatusesInts(value []float32, variableName string) error {
-	if value == nil {
-		return nil
-	}
-
-	if HasDuplicates(value) {
-		return NewParameterValidationError(variableName, "must not contain duplicates")
-	}
-	validStatuses := []float32{1, 2, 3}
-	if !IsSubset(value, validStatuses) {
-		return NewParameterValidationError(variableName, fmt.Sprintf("can only contain %v", validStatuses))
-	}
-	return nil
-}
-
 func CheckStatusesStrings(value []string, variableName string) error {
 	if HasDuplicates(value) {
 		return NewParameterValidationError(variableName, "must not contain duplicates")

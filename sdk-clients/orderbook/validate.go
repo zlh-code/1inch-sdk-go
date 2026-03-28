@@ -33,7 +33,6 @@ func (params *GetOrdersByCreatorAddressParams) Validate() error {
 	validationErrors = validate.Parameter(params.CreatorAddress, "creatorAddress", validate.CheckEthereumAddressRequired, validationErrors)
 	validationErrors = validate.Parameter(params.Page, "page", validate.CheckPage, validationErrors)
 	validationErrors = validate.Parameter(params.Limit, "limit", validate.CheckLimit, validationErrors)
-	validationErrors = validate.Parameter(params.Statuses, "statuses", validate.CheckStatusesInts, validationErrors)
 	validationErrors = validate.Parameter((string)(params.SortBy), "sortBy", validate.CheckSortBy, validationErrors)
 	validationErrors = validate.Parameter(params.TakerAsset, "takerAsset", validate.CheckEthereumAddress, validationErrors)
 	validationErrors = validate.Parameter(params.MakerAsset, "makerAsset", validate.CheckEthereumAddress, validationErrors)
@@ -50,7 +49,6 @@ func (params *GetAllOrdersParams) Validate() error {
 	var validationErrors []error
 	validationErrors = validate.Parameter(params.Page, "page", validate.CheckPage, validationErrors)
 	validationErrors = validate.Parameter(params.Limit, "limit", validate.CheckLimit, validationErrors)
-	validationErrors = validate.Parameter(params.Statuses, "statuses", validate.CheckStatusesInts, validationErrors)
 	validationErrors = validate.Parameter((string)(params.SortBy), "sortBy", validate.CheckSortBy, validationErrors)
 	validationErrors = validate.Parameter(params.TakerAsset, "takerAsset", validate.CheckEthereumAddress, validationErrors)
 	validationErrors = validate.Parameter(params.MakerAsset, "makerAsset", validate.CheckEthereumAddress, validationErrors)

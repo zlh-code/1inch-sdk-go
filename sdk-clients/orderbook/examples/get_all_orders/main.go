@@ -34,7 +34,7 @@ func main() {
 		LimitOrderV3SubscribedApiControllerGetAllLimitOrdersParams: orderbook.LimitOrderV3SubscribedApiControllerGetAllLimitOrdersParams{
 			Page:     0,
 			Limit:    2,
-			Statuses: []float32{1},
+			Statuses: "",
 		},
 	})
 	if err != nil {
